@@ -62,7 +62,5 @@ $ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 ## New User
 ```
-$ useradd -mg users -G wheel,storage,power -s /bin/bash ${username}
-$ passwd ${username}
-$ echo '%wheel ALL=(ALL) ALL' >> /etc/sudoers
-```'
+$ useradd -G wheel -m ${user}
+```
