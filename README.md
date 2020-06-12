@@ -64,3 +64,21 @@ $ grub-mkconfig -o /boot/grub/grub.cfg
 ```
 $ useradd -G wheel -m ${user}
 ```
+## Post-Install
+packages (there are a number of unnessesary packages here, but I find it cleaner to install them all)
+```
+$ pacman -S git vim firefox
+$ pacman -S xorg-server xorg-xinit xorg-xrandr
+$ pacman -S i3
+```
+nerd fonts is the easiest way to manage fonts
+```
+$ cd /var/tmp
+$ git clone https://github.com/ryanoasis/nerd-fonts.git --depth 1
+$ cd nerd-fonts && ./install.sh
+```
+xorg i3 setup
+```
+$ echo "exec i3" >> ~/.xinitrc
+```
+
